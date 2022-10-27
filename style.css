@@ -58,7 +58,7 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(0deg, #070b0f 10%, rgba(255, 255, 255, 0)), url("https://xmardex.github.io/portfolio/imgs/header.jpg");
+  background-image: linear-gradient(0deg, #070b0f 10%, rgba(255, 255, 255, 0)), url(https://xmardex.github.io/portfolio/imgs/header.jpg);
   min-height: 480px;
   background-size: cover;
   display: flex;
@@ -162,7 +162,7 @@ body {
   flex-direction: column;
 }
 .games .game-preview a {
-  background-image: url(https://xmardex.github.io/portfolio/imgs/svgs/download_orange.svg);
+  background-image: url(https://raw.github.com/xmardex/portfolio/main/imgs/svgs/download_orange.svg?sanitize=true);
   background-repeat: no-repeat;
   padding-left: 24px;
   font-size: 18px;
@@ -172,7 +172,7 @@ body {
 }
 .games .game-preview a:hover {
   color: lightblue;
-  background-image: url(https://xmardex.github.io/portfolio/imgs/svgs/download_blue.svg);
+  background-image: url(https://raw.github.com/xmardex/portfolio/main/imgs/svgs/download_blue.svg?sanitize=true);
 }
 .games .game-preview video {
   background-color: black;
