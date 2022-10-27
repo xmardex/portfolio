@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: #121519;
+}
+
+.navbar {
+  padding: 0 15px;
+  z-index: 10;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  min-width: 1070px;
+  background-image: linear-gradient(0deg, #21252aab, #0c131a);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.navbar .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 5px;
+  padding: 1px 15px 1px 15px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+.navbar .logo img {
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.05));
+  margin-right: 15px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff21;
+  padding: 6px;
+  border-radius: 30px;
+}
+.navbar .anchors {
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.navbar .anchors a {
+  transition: 0.3s;
+  color: white;
+  text-decoration: none;
+}
+.navbar .anchors a:hover {
+  transition: 0.3s;
+  color: #2398ff;
+}
+
+.header {
+  background-image: linear-gradient(0deg, #070b0f 10%, rgba(255, 255, 255, 0)), url("/imgs/header.jpg");
+  min-height: 480px;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+  align-items: center;
+  margin-top: 80px;
+}
+.header .socials {
+  display: flex;
+}
+.header .socials a {
+  margin: 30px;
+}
+.header .socials a img {
+  transition: 0.2s;
+  border-radius: 30px;
+  width: 58px;
+  outline: 0px solid white;
+}
+.header .socials a:hover img {
+  transition: 0.2s;
+  padding: 5px;
+  outline: 5px solid white;
+}
+.header .profile {
+  display: flex;
+  justify-content: space-between;
+  transition: 1s;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 125px;
+  padding: 5px;
+}
+.header .profile img {
+  border-radius: 125px;
+  width: 250px;
+}
+.header .profile .info {
+  transition: 1s;
+  transform: scaleX(0);
+  opacity: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex: 1;
+  align-self: center;
+  color: black;
+  white-space: nowrap;
+  transform-origin: left;
+}
+.header .profile .info .pitch {
+  font-size: 16px;
+}
+.header .profile:hover {
+  transition: 1s;
+  width: 850px;
+}
+.header .profile:hover .info {
+  transition: 1s;
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.s-title-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 24px;
+  height: 60px;
+  width: 100%;
+  background-color: #070b0f;
+}
+
+.resume-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.games {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.games .game-preview {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.games .game-preview a {
+  background-image: url(/imgs/svgs/download_orange.svg);
+  background-repeat: no-repeat;
+  padding-left: 24px;
+  font-size: 18px;
+  margin-left: 10px;
+  color: orange;
+  text-decoration: none;
+}
+.games .game-preview a:hover {
+  color: lightblue;
+  background-image: url(/imgs/svgs/download_blue.svg);
+}
+.games .game-preview video {
+  background-color: black;
+}
+.games .game-preview .game-name {
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.games .game-preview .work-description {
+  margin-left: 15px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.design-title {
+  background-color: #131a21;
+  padding: 15px;
+  border-bottom: 3px solid #232d37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.design-title span {
+  font-size: 18px;
+}
+
+.minis {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.minis .sample {
+  margin: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.minis .sample span {
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  text-align: center;
+  margin: 10px;
+}
+.minis .sample img {
+  pointer-events: auto;
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 0;
+  object-fit: cover;
+  object-position: top center;
+  width: 240px;
+  height: 360px;
+}
+.minis .sample:hover {
+  cursor: pointer;
+}
+.minis .sample:hover span {
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.minis .sample:hover img {
+  transition: 0.5s;
+  filter: brightness(0.2);
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #232d37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: #515f6d;
+}
+footer .q {
+  font-size: 24px;
+}
+footer .c {
+  font-size: 14px;
+}

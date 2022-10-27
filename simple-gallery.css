@@ -1,0 +1,41 @@
+.simple-gallery div.item 				{ display: inline-block; }
+.simple-gallery .item > a 				{ display: block; overflow: hidden; cursor: pointer; }
+.simple-gallery .full 					{ position: fixed; height: 100%; width: 100%; background-color: rgba(0,0,0,0.90); top: 0; left: 0; opacity: 0; pointer-events: none; -o-transition: opacity 0.5s linear; -ms-transition: opacity 0.5s linear; -moz-transition: opacity 0.5s linear; -webkit-transition: opacity 0.5s linear; transition: opacity 0.5s linear; z-index: 9998; }
+.simple-gallery .full img 				{ position: fixed; background-color: white; margin: 0; padding: 0; max-height: 90%; max-width: 90%; top: 50%; left: 50%; margin-right: -50%; -o-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -o-box-shadow: 0 0 20px black; -ms-box-shadow: 0 0 20px black; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; width: auto !important; }
+.simple-gallery a.button_close,
+.simple-gallery a.button_prev,
+.simple-gallery a.button_next 				{ position: fixed; text-decoration: none; visibility: hidden; color: white; font-family: icon, "Source Sans Pro", Arial; font-size: 40px; font-weight: 100; cursor: pointer; }
+.simple-gallery a.button_close 				{ top: 1%; right: 3%; cursor: pointer; }
+.simple-gallery a.button_close::after 			{ content: '\00d7'; }
+.simple-gallery a.button_prev,
+.simple-gallery a.button_next 				{ top: 50%; -o-transform: translate(0%, -50%); -ms-transform: translate(0%, -50%); -moz-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); }
+.simple-gallery a.button_prev 				{ left: 3%; }
+.simple-gallery a.button_next 				{ right: 3%; }
+.simple-gallery a.target ~ a.button_close,
+.simple-gallery a.target ~ a.button_prev,
+.simple-gallery a.target ~ a.button_next                { visibility: visible; z-index: 9999; }
+.simple-gallery a.target > img.thumbnail                { background-color: rgba(0,0,0,0); border: 0 none; padding: 0; }
+.simple-gallery a.target > img.thumbnail + .full        { visibility: visible; opacity: 1; pointer-events: initial; }
+.simple-gallery .full                                   { cursor: initial; }
+.simple-gallery a.target .full                          { opacity: 1; }
+
+.simple-gallery .full img + .description                { background-color: #101010; bottom: 0; color: #fff; display: inline-block; height: auto; left: 0; padding: 0 15px 3px; position: fixed; width: 100%; font-size: 16px; -o-border-radius: 32px 32px 0 0; -ms-border-radius: 32px 32px 0 0; -moz-border-radius: 32px 32px 0 0; -webkit-border-radius: 32px 32px 0 0; border-radius: 32px 32px 0 0; }
+.simple-gallery .full img + .description .title         { display: block; font-size: 1.45em; width: 100%; }
+
+.simple-gallery a.button_prev, 
+.simple-gallery a.button_next,
+.simple-gallery a.button_close                          { width: 32px; background: rgba(0,0,0,0.5); -o-border-radius: 5px; -ms-border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; text-align: center; height: 32px; line-height: 32px; }
+
+.simple-gallery a.button_prev:hover,
+.simple-gallery a.button_next:hover,
+.simple-gallery a.button_close:hover                    { color: #ffffff; background-color: rgba(255,255,255,0.10); }
+
+.simple-gallery .item > a > img                         { -o-transform: scale(1.2); -ms-transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); background-color: rgba(0,0,0,0); border: 0 none; padding: 0; }
+.simple-gallery .item > a > img:hover                   { -o-transform: scale(1.0); -ms-transform: scale(1.0); -moz-transform: scale(1.0); -webkit-transform: scale(1.0); transform: scale(1.0); }
+@media screen and (max-width: 1024px){
+  .simple-gallery.space img       { width: 100%; max-width: none; }
+  .simple-gallery.space div.item  { width: 100%; }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .simple-gallery.space img       { width: 100%;  }
+}
